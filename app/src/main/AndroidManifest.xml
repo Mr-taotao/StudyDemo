@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chtlei.mydemo">
+
+    <!--
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    -->
+
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="com.example.chtlei.mydemo.broadcast" />
+    <permission android:name="com.example.chtlei.mydemo.broadcast" />
+
+    <application
+        android:name=".MyDemoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MyDemoActivity">
+        </activity>
+
+        <activity android:name=".deviceinfo.GetDeviceInfosActivity" />
+        <activity android:name=".webview.WebViewActivity" />
+        <activity android:name=".jnitest.JNITestActivity" />
+        <activity android:name=".jobscheduler.JobSchedulerActivity"/>
+        <activity android:name=".notification.NotificationMainActivity"/>
+        <activity android:name=".notification.NotificationSecondActivity"/>
+        <activity android:name=".notification.NotificationThirdActivity"/>
+        <activity android:name=".photowall.PhotoWallActivity" />
+        <activity android:name=".banner.BannerActivity"/>
+        <activity android:name=".handler.MyHandlerTest"/>
+        <activity android:name=".filedownload.FileDownloadActivity"/>
+        <activity android:name=".bannerads.ShowAdsViewActivity"/>
+        <activity
+            android:name=".splash.SplashActivity"
+            android:alwaysRetainTaskState="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.example.chtlei.mydemo.shortcut.ShortCutReceiver"
+            android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.INSTALL_SHORTCUT"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".broadcast.MyReceiver"
+            android:exported="true"
+            android:permission="com.example.chtlei.mydemo.broadcast">
+            <intent-filter>
+                <action android:name="com.example.chtlei.mydemo.broadcast" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".broadcast.NoPermissionReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.chtlei.mydemo.foreground"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".notification.NotificationReceiver"/>
+
+        <service android:name=".notification.NotificationService"/>
+        <service android:name=".foreground.ForegroundTestService" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+
+        <!--<service-->
+            <!--android:name=".jobscheduler.MyJobService"-->
+            <!--android:permission="android.permission.BIND_JOB_SERVICE"-->
+            <!--android:exported="true"/>-->
+        <!--<service android:name=".notification.NotificationService" />-->
+
+        <!--&lt;!&ndash; [START fcm_default_icon] &ndash;&gt;-->
+        <!--&lt;!&ndash; Set custom default icon. This is used when no icon is set for incoming notification messages.-->
+             <!--See README(https://goo.gl/l4GJaQ) for more. &ndash;&gt;-->
+        <!--<meta-data-->
+            <!--android:name="com.google.firebase.messaging.default_notification_icon"-->
+            <!--android:resource="@drawable/ic_stat_ic_notification" />-->
+        <!--&lt;!&ndash; Set color used with incoming notification messages. This is used when no color is set for the incoming-->
+             <!--notification message. See README(https://goo.gl/6BKBk7) for more. &ndash;&gt;-->
+        <!--<meta-data-->
+            <!--android:name="com.google.firebase.messaging.default_notification_color"-->
+            <!--android:resource="@color/colorAccent" />-->
+        <!--&lt;!&ndash; [END fcm_default_icon] &ndash;&gt;-->
+        <!--&lt;!&ndash; [START fcm_default_channel] &ndash;&gt;-->
+        <!--<meta-data-->
+            <!--android:name="com.google.firebase.messaging.default_notification_channel_id"-->
+            <!--android:value="@string/default_notification_channel_id" />-->
+        <!--&lt;!&ndash; [END fcm_default_channel] &ndash;&gt;-->
+
+        <!--&lt;!&ndash; [START firebase_service] &ndash;&gt;-->
+        <!--<service android:name=".fcmtest.MyFirebaseMessagingService">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.firebase.MESSAGING_EVENT" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+        <!--&lt;!&ndash; [END firebase_service] &ndash;&gt;-->
+        <!--<service-->
+            <!--android:name=".fcmtest.MyJobService"-->
+            <!--android:exported="false">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+
+        <service android:name=".aidl.BookService"
+            android:process=":remote">
+
+        </service>
+
+        <provider android:name=".contentprovider.MyContentProvider"
+            android:authorities="cn.scu.myprovider"/>
+    </application>
+
+</manifest>

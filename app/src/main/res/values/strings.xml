@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">MyDemo</string>
+    <string name="create_shortcut">创建快捷方式</string>
+    <string name="get_phone_info">获取设备信息</string>
+    <string name="send_broadcast">静态广播测试</string>
+    <string name="jni_test">JNI TEST</string>
+    <string name="webview_test">WebView</string>
+    <string name="is_foreground">前后台应用判断</string>
+    <string name="job_scheduler">JobScheduler</string>
+    <string name="notification_btn">Notification</string>
+    <string name="photo_wall_btn">PhotoWall</string>
+    <string name="fcm_btn">FCM</string>
+    <string name="banner_btn">Banner</string>
+
+    <string name="onstoptask">onStopTask</string>
+    <string name="onstarttask">onStartTask</string>
+    <string name="defaultparamtext">task params will show up here.</string>
+    <string name="schedule_job_button_text">Schedule Job</string>
+    <string name="cancel_all_jobs_button_text">Cancel all</string>
+    <string name="finish_job_button_text">Finish last task</string>
+    <string name="idle_mode_text">Requires device in idle mode.</string>
+    <string name="charging_caption">Charging:</string>
+    <string name="charging_text">Requires device plugged in.</string>
+    <string name="idle_caption">Idle:</string>
+    <string name="connectivity">Connectivity:</string>
+    <string name="any">Any</string>
+    <string name="unmetered">WiFi</string>
+    <string name="timing">Timing:</string>
+    <string name="delay">Delay:</string>
+    <string name="deadline">Deadline:</string>
+    <string name="work_duration">Work duration:</string>
+    <string name="cancelled_job">Cancelled job %d</string>
+    <string name="no_jobs_to_cancel">No jobs to cancel</string>
+    <string name="all_jobs_cancelled">All jobs cancelled</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+</resources>

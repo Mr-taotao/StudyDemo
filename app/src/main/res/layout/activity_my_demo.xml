@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chtlei.mydemo.MyDemoActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/create_shortcut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/create_shortcut"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/get_phone_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/create_shortcut"
+                android:text="@string/get_phone_info"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/web_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/get_phone_info"
+                android:text="@string/webview_test"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/send_broadcast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/web_view"
+                android:text="@string/send_broadcast"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/jni_test_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/send_broadcast"
+                android:text="@string/jni_test"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/is_foreground_test_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/jni_test_btn"
+                android:text="@string/is_foreground"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/job_scheduler_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/is_foreground_test_btn"
+                android:text="@string/job_scheduler"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/notification_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/job_scheduler_test"
+                android:text="@string/notification_btn"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/photo_wall_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/notification_btn"
+                android:text="@string/photo_wall_btn"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/fcm_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/photo_wall_btn"
+                android:text="@string/fcm_btn"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/banner_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/fcm_btn"
+                android:text="@string/banner_btn"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/handler_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/banner_btn"
+                android:text="Handler"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/contentprovider_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/handler_btn"
+                android:text="Content Provider"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/sqllite_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/contentprovider_btn"
+                android:text="SQLlite"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/aidl_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/sqllite_btn"
+                android:text="AIDL"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/down_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/aidl_btn"
+                android:text="DOWNLOAD"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/adsview_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/down_btn"
+                android:text="AdsView"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
