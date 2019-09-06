@@ -66,7 +66,7 @@ public class PhotoWallActivity extends Activity {
     private void initView () {
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         PhotoRecycleViewAdapter adapter = new PhotoRecycleViewAdapter(this,Images.imageThumbUrls);
-        recyclerView.setLayoutManager(new GridLayoutManager(this,3,GridLayoutManager.VERTICAL,false));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,1,GridLayoutManager.VERTICAL,false));
         recyclerView.setAdapter(adapter);
         recyclerView.setItemAnimator (new DefaultItemAnimator());
     }

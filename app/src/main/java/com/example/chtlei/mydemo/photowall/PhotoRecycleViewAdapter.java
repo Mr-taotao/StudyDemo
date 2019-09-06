@@ -30,18 +30,22 @@ public class PhotoRecycleViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.recycle_view_item,parent,false));
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.recycle_view_item_1,parent,false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
         ViewHolder viewHolder = (ViewHolder) holder;
-        Glide.with(context).load(data[position]).into(viewHolder.imageView);
+//        Glide.with(context).load(data[position]).into(viewHolder.imageView);
         viewHolder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context,"onclick position is " + position,Toast.LENGTH_LONG).show();
             }
+        });
+
+        viewHolder.imageView1.setOnClickListener(v -> {
+            Toast.makeText(context,"onclicklike position is " + position,Toast.LENGTH_LONG).show();
         });
     }
 
@@ -74,6 +78,7 @@ public class PhotoRecycleViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private SparseArray<View> viewSparseArray;
         private ImageView imageView;
+        private ImageView imageView1;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -82,11 +87,16 @@ public class PhotoRecycleViewAdapter extends RecyclerView.Adapter<RecyclerView.V
                 viewSparseArray = new SparseArray<>();
             }
 
-            imageView = (ImageView) viewSparseArray.get(R.id.recycler_item_imv);
+            imageView = (ImageView) viewSparseArray.get(R.id.imageView2);
+            imageView1 = (ImageView) viewSparseArray.get(R.id.imageView3);
 
             if (imageView == null) {
-                imageView = itemView.findViewById(R.id.recycler_item_imv);
-                viewSparseArray.put(R.id.recycler_item_imv, imageView);
+                imageView = itemView.findViewById(R.id.imageView2);
+                viewSparseArray.put(R.id.imageView2, imageView);
+            }
+            if (imageView1 == null) {
+                imageView1 = itemView.findViewById(R.id.imageView3);
+                viewSparseArray.put(R.id.imageView3, imageView1);
             }
         }
     }

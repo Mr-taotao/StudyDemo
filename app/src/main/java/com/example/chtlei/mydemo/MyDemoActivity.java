@@ -1,6 +1,7 @@
 package com.example.chtlei.mydemo;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.FragmentManager;
 import android.app.job.JobInfo;
 import android.app.job.JobScheduler;
@@ -42,6 +43,8 @@ import com.example.chtlei.mydemo.proxy.ProxySubject;
 import com.example.chtlei.mydemo.proxy.RealSubject;
 import com.example.chtlei.mydemo.shortcut.ShortCutManager;
 import com.example.chtlei.mydemo.sqllite.MyDBOperation;
+import com.example.chtlei.mydemo.videoview.VideoSplashActivity;
+import com.example.chtlei.mydemo.videoview.VideoViewActivity;
 import com.example.chtlei.mydemo.webview.WebViewActivity;
 //import com.google.android.gms.tasks.OnCompleteListener;
 //import com.google.android.gms.tasks.Task;
@@ -131,6 +134,7 @@ public class MyDemoActivity extends Activity implements View.OnClickListener {
             ProxySubject proxySubject = new ProxySubject(new RealSubject());
             proxySubject.request();
         });
+        findViewById(R.id.videoview_btn).setOnClickListener(this);
     }
 
     @Override
@@ -141,6 +145,8 @@ public class MyDemoActivity extends Activity implements View.OnClickListener {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     ShortCutManager.addShortCut(this);
                 }
+//                ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+//                activityManager.killBackgroundProcesses("com.phone.launcher.android");
                 break;
             case R.id.get_phone_info:
                 Log.i(TAG, "get_phone_info onclick");
@@ -340,6 +346,11 @@ public class MyDemoActivity extends Activity implements View.OnClickListener {
                     e.printStackTrace();
                 }
 
+                break;
+            case R.id.videoview_btn:
+                Log.i(TAG, "videoview_btn onclick");
+                Intent intent = new Intent(this, VideoSplashActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;
