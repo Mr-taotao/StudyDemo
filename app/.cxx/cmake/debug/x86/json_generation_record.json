@@ -25,15 +25,11 @@
   },
   {
     "level": "INFO",
-    "message": "- expected json D:\\01_Android\\AndroidStudioProject\\StudyDemo\\app\\.cxx\\cmake\\debug\\x86\\android_gradle_build.json file is not present, will remove stale json folder"
+    "message": "- force flag, will remove stale json folder"
   },
   {
     "level": "INFO",
-    "message": "- missing previous command file D:\\01_Android\\AndroidStudioProject\\StudyDemo\\app\\.cxx\\cmake\\debug\\x86\\build_command.txt, will remove stale json folder"
-  },
-  {
-    "level": "INFO",
-    "message": "- command changed from previous, will remove stale json folder"
+    "message": "removing stale contents from \u0027D:\\01_Android\\AndroidStudioProject\\StudyDemo\\app\\.cxx\\cmake\\debug\\x86\u0027"
   },
   {
     "level": "INFO",
