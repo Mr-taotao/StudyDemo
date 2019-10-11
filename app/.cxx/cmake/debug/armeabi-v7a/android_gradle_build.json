@@ -1,0 +1,44 @@
+
+{
+	"buildFiles" : [ "D:/01_Android/AndroidStudioProject/StudyDemo/app/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"D:\\01_Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\01_Android\\AndroidStudioProject\\StudyDemo\\app\\.cxx\\cmake\\debug\\armeabi-v7a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"native-jni-Debug-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "native-jni",
+			"buildCommand" : "D:\\01_Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\01_Android\\AndroidStudioProject\\StudyDemo\\app\\.cxx\\cmake\\debug\\armeabi-v7a --target native-jni",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi19 --gcc-toolchain=D:/01_Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/01_Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_jni_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "D:/01_Android/AndroidStudioProject/StudyDemo/app/src/main/jni/native-lib.cpp",
+					"workingDirectory" : "D:/01_Android/AndroidStudioProject/StudyDemo/app/.cxx/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi19 --gcc-toolchain=D:/01_Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/01_Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_jni_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "D:/01_Android/AndroidStudioProject/StudyDemo/app/src/main/jni/test.cpp",
+					"workingDirectory" : "D:/01_Android/AndroidStudioProject/StudyDemo/app/.cxx/cmake/debug/armeabi-v7a"
+				}
+			],
+			"output" : "D:/01_Android/AndroidStudioProject/StudyDemo/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-jni.so",
+			"toolchain" : "3596226949"
+		}
+	},
+	"toolchains" : 
+	{
+		"3596226949" : 
+		{
+			"cCompilerExecutable" : "D:/01_Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "D:/01_Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}

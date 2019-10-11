@@ -28,6 +28,7 @@ import com.example.chtlei.mydemo.broadcast.MyReceiver;
 import com.example.chtlei.mydemo.broadcast.NoPermissionReceiver;
 import com.example.chtlei.mydemo.contentprovider.MyContentUtils;
 import com.example.chtlei.mydemo.deviceinfo.GetDeviceInfosActivity;
+import com.example.chtlei.mydemo.eventbus.FirstEventBusActivity;
 import com.example.chtlei.mydemo.filedownload.FileDownloadActivity;
 import com.example.chtlei.mydemo.foreground.ForegroundTestService;
 import com.example.chtlei.mydemo.foreground.ForegroundUtils;
@@ -135,6 +136,7 @@ public class MyDemoActivity extends Activity implements View.OnClickListener {
             proxySubject.request();
         });
         findViewById(R.id.videoview_btn).setOnClickListener(this);
+        findViewById(R.id.eventbus_btn).setOnClickListener(this);
     }
 
     @Override
@@ -351,6 +353,11 @@ public class MyDemoActivity extends Activity implements View.OnClickListener {
                 Log.i(TAG, "videoview_btn onclick");
                 Intent intent = new Intent(this, VideoSplashActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.eventbus_btn:
+                Log.i(TAG, "eventbus_btn onclick");
+                Intent intent1 = new Intent(this, FirstEventBusActivity.class);
+                startActivity(intent1);
                 break;
             default:
                 break;

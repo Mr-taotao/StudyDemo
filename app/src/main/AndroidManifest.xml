@@ -43,6 +43,12 @@
         <activity android:name=".bannerads.ShowAdsViewActivity"/>
         <activity android:name=".videoview.VideoViewActivity"/>
         <activity android:name=".videoview.VideoSplashActivity"/>
+        <activity android:name=".eventbus.FirstEventBusActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".eventbus.SecondEventBusActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".eventbus.ThirdEventBusActivity"
+            android:launchMode="singleTop"/>
         <activity
             android:name=".splash.SplashActivity"
             android:alwaysRetainTaskState="false"
