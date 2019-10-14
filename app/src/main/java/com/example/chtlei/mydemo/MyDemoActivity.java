@@ -42,6 +42,7 @@ import com.example.chtlei.mydemo.proxy.MyInvokeHandler;
 import com.example.chtlei.mydemo.proxy.ProxyInterface;
 import com.example.chtlei.mydemo.proxy.ProxySubject;
 import com.example.chtlei.mydemo.proxy.RealSubject;
+import com.example.chtlei.mydemo.rxjava.RxJavaActivity;
 import com.example.chtlei.mydemo.shortcut.ShortCutManager;
 import com.example.chtlei.mydemo.sqllite.MyDBOperation;
 import com.example.chtlei.mydemo.videoview.VideoSplashActivity;
@@ -137,6 +138,7 @@ public class MyDemoActivity extends Activity implements View.OnClickListener {
         });
         findViewById(R.id.videoview_btn).setOnClickListener(this);
         findViewById(R.id.eventbus_btn).setOnClickListener(this);
+        findViewById(R.id.rxjava_btn).setOnClickListener(this);
     }
 
     @Override
@@ -358,6 +360,11 @@ public class MyDemoActivity extends Activity implements View.OnClickListener {
                 Log.i(TAG, "eventbus_btn onclick");
                 Intent intent1 = new Intent(this, FirstEventBusActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.rxjava_btn:
+                Log.i(TAG, "rxjava_btn onclick");
+                Intent intentRxJava = new Intent(this, RxJavaActivity.class);
+                startActivity(intentRxJava);
                 break;
             default:
                 break;

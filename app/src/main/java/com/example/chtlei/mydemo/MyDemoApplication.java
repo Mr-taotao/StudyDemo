@@ -2,6 +2,7 @@ package com.example.chtlei.mydemo;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.chtlei.mydemo.db.DaoMaster;
@@ -29,6 +30,11 @@ public class MyDemoApplication extends Application {
     public static MyDemoApplication getInstance () {
 
         return mMyDemoApplication;
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
     }
 
     @Override

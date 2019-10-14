@@ -49,6 +49,8 @@
             android:launchMode="singleTop"/>
         <activity android:name=".eventbus.ThirdEventBusActivity"
             android:launchMode="singleTop"/>
+        <activity android:name=".rxjava.RxJavaActivity"
+            android:launchMode="singleTask"/>
         <activity
             android:name=".splash.SplashActivity"
             android:alwaysRetainTaskState="false"

@@ -1,4 +1,4 @@
 # ninja log v5
-0	229	0	CMakeFiles/native-jni.dir/src/main/jni/test.cpp.o	712f2c9565c9e7e7
-7	263	0	CMakeFiles/native-jni.dir/src/main/jni/native-lib.cpp.o	f1163f82fe572ba9
-263	431	0	../../../../build/intermediates/cmake/debug/obj/x86/libnative-jni.so	29cc8c6f7f8685cd
+4	762	0	CMakeFiles/native-jni.dir/src/main/jni/test.cpp.o	712f2c9565c9e7e7
+1	894	0	CMakeFiles/native-jni.dir/src/main/jni/native-lib.cpp.o	f1163f82fe572ba9
+894	983	0	../../../../build/intermediates/cmake/debug/obj/x86/libnative-jni.so	29cc8c6f7f8685cd

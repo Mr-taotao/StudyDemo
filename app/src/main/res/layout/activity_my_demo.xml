@@ -200,6 +200,16 @@
                 android:layout_below="@id/videoview_btn"
                 android:text="EventBus"
                 android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/rxjava_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/eventbus_btn"
+                android:text="RxJava"
+                android:textSize="20sp"/>
         </RelativeLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

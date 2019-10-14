@@ -1,9 +1,13 @@
 package com.example.chtlei.mydemo.utils;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Rect;
 import android.support.annotation.NonNull;
+
+import java.io.IOException;
 
 public class BitmapBuilder {
 
@@ -33,5 +37,31 @@ public class BitmapBuilder {
         options.inJustDecodeBounds = false;
         Bitmap bitmap = BitmapFactory.decodeResource(res, resId, options);
         return bitmap;
+    }
+
+    public static Bitmap getBitmapByAssetsName(Context context, String name){
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+        options.inMutable = true;
+
+        try {
+            return BitmapFactory.decodeStream(context.getAssets().open(name),new Rect(),options);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static Bitmap getBitmapByAssetsNameRGB(Context context, String name){
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inPreferredConfig = Bitmap.Config.RGB_565;
+        options.inMutable = true;
+
+        try {
+            return BitmapFactory.decodeStream(context.getAssets().open(name),new Rect(),options);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
