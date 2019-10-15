@@ -4,11 +4,21 @@ import java.lang.reflect.Method;
 
 public class ReflectMethodItem {
 
-    private String reflectModuleClassName;
-    private String reflectModuleMethodName;
+    public String reflectModuleClassName;
+    public String reflectModuleMethodName;
 
-    private Object mObject;
-    private Method mMethod;
+    public Object mObject;
+    public Method mMethod;
 
+    ReflectMethodItem() {
 
+    }
+
+    public ReflectMethodItem (String reflectModuleClassName, String reflectModuleMethodName,
+            Object mObject, Method mMethod) {
+        this.reflectModuleClassName = reflectModuleClassName;
+        this.reflectModuleMethodName = reflectModuleMethodName;
+        this.mObject = mObject;
+        this.mMethod = mMethod;
+    }
 }
